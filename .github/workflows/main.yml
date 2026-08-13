@@ -1,1 +1,16 @@
-Playwright myselfe framwork
+  name: My First GitHub Action
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Test
+        run: echo "Hello Ramesh, GitHub Actions is working!"
